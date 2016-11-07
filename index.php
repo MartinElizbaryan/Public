@@ -20,7 +20,8 @@ $myfile = fopen(__DIR__ . '/' .$name.".txt", "w") ;
 chmod(__DIR__ . '/' .$name.".txt", 0777);
 
 fwrite($myfile, 'My name is '.$name.' '.$surname." . I'm ".$age." years old");
-//fwrite($myfile,include 'test.php');
+
+
 
 fclose($myfile);
 
@@ -29,10 +30,11 @@ $dir= __DIR__ . 'index.php/' .$name.'-'.$surname ;
 move_uploaded_file($_FILES['file']['tmp_name'],$dir.'/'.$_FILES['file']['name']);
 chmod($dir.'/'.$_FILES['file']['name'], 0777);
 
+// ********************************
 
 
 echo '<pre>';
-print_r($_SERVER);
+print_r($_REQUEST);
 echo '</pre>';
 
 
